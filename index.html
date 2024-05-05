@@ -5,36 +5,163 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/styles.css">
   <title>Birdup's Website</title>
+  <style>
+    /* Navigation Bar Styles */
+    header {
+      background-color: #1f1f1f;
+      padding: 10px 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0 20px;
+    }
+
+    nav ul li a {
+      color: #f5f5f5;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #4da6ff;
+    }
+
+    /* Existing Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #1f1f1f;
+      color: #f5f5f5;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: #4da6ff;
+      color: #f5f5f5;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+
+    .cta-button:hover {
+      background-color: #0056b3;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 40px;
+    }
+
+    .feature {
+      background-color: #2b2b2b;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s;
+    }
+
+    .feature:hover {
+      background-color: #3b3b3b;
+    }
+
+    .feature h2 {
+      margin-top: 0;
+    }
+
+    .expertise {
+      background-color: #2b2b2b;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .expertise h2 {
+      font-size: 24px;
+      margin-top: 0;
+    }
+
+    .expertise p {
+      font-size: 18px;
+      margin-bottom: 0;
+    }
+
+    footer {
+      background-color: #1f1f1f;
+      color: #f5f5f5;
+      padding: 20px 0;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
   <header>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="#">About</a></li>
         <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="#">Contact</a></li>
       </ul>
     </nav>
   </header>
   <main>
-    <section class="hero">
-      <h1>Welcome to Birdup's website (Under Development)</h1>
-      <p>Discover the projects I have worked on</p>
-      <a href="portfolio.html" class="cta-button">Explore Projects</a>
-    </section>
-    <section class="features">
-      <div class="feature">
-        <h2>Video Editing</h2>
-      </div>
-      <div class="feature">
-        <h2>Programming</h2>
-      </div>
-      <div class="feature">
-        <h2>Filming</h2>
-      </div>
-    </section>
-</main>
+    <div class="container">
+      <section class="hero">
+        <h1>Welcome to Birdup's website</h1>
+        <p>Discover the projects I have worked on</p>
+        <a href="portfolio.html" class="cta-button">Explore Projects</a>
+      </section>
+      <section class="expertise">
+        <h2>My Expertise</h2>
+        <p>I specialize in video editing, programming, and filming.</p>
+      </section>
+      <section class="features">
+        <div class="feature">
+          <h2>Video Editing</h2>
+        </div>
+        <div class="feature">
+          <h2>Programming</h2>
+        </div>
+        <div class="feature">
+          <h2>Filming</h2>
+        </div>
+      </section>
+    </div>
+  </main>
 
   <footer>
     <p>Birdup's website from the year 2024</p>

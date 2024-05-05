@@ -3,41 +3,158 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/portfolio.css">
-  <title>Portfolio</title>
+  <title>Birdup's Contributions for AGiXT</title>
+  <style>
+    :root {
+      --bg-color: #1f1f1f;
+      --text-color: #f5f5f5;
+      --project-bg: #2b2b2b;
+      --project-hover: #3b3b3b;
+      --link-color: #4da6ff;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px;
+    }
+
+    .section {
+      margin-bottom: 60px;
+    }
+
+    .section h2 {
+      margin-top: 0;
+    }
+
+    .umbrella {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 40px;
+    }
+
+    .project {
+      background-color: var(--project-bg);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s;
+    }
+
+    .project:hover {
+      background-color: var(--project-hover);
+    }
+
+    .project h3 {
+      margin-top: 0;
+    }
+
+    .project p {
+      margin-bottom: 20px;
+    }
+
+    .project a {
+      display: inline-block;
+      background-color: var(--link-color);
+      color: var(--text-color);
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+
+    .project a:hover {
+      background-color: #0056b3;
+    }
+
+    /* Navigation Bar Styles */
+    header {
+      background-color: var(--bg-color);
+      padding: 10px 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0 20px;
+    }
+
+    nav ul li a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: var(--link-color);
+    }
+  </style>
 </head>
 <body>
   <header>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="#">About</a></li>
         <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="#">Contact</a></li>
       </ul>
     </nav>
   </header>
-  <main>
-    <section class="project">
-      <img src="img/projectpic1.png" alt="Project 1">
-      <h3>ADHD-TaskManagementPanel</h3>
-      <p>Task management fundamentally ensures focused work, better time usage and less procrastination, while aiding memory, boosting efficiency, promoting deadline adherence, tracking goal progression and reducing stress. It's a universal tool beneficial for all, including those with ADHD and without. Also Mental health is important in general so that is why I decided to make this application as it would be a game changer in helping everyone overall and you'll be able to see the code so you know what is running yay for open-source!!</p>
-    </section>
-    <section class="project">
-      <div class="img">
-      <img src="project2.jpg" alt="Project 2">
+
+  <div class="container">
+    <h1>Birdup's Contributions for AGiXT</h1>
+
+    <div class="section">
+      <h2>UIs</h2>
+      <div class="umbrella">
+        <div class="project">
+          <h3>Kivy UI</h3>
+          <p>A cross-platform user interface built with the Kivy framework, offering a seamless and responsive experience across various devices.</p>
+          <a href="https://github.com/birdup000/Kivy-AGIXT">Learn More</a>
+        </div>
+        <div class="project">
+          <h3>Flutter UI</h3>
+          <p>A modern and visually appealing user interface developed using the Flutter framework, providing a consistent and native-like experience.</p>
+          <a href="https://github.com/birdup000/FlutterUI-AGiXT">Learn More</a>
+        </div>
       </div>
-      <h3>Project Title 2</h3>
-      <p>Description of the project goes here. It should be a brief overview of the project and its key features.</p>
-    </section>
-    <section class="project">
-      <img src="project3.jpg" alt="Project 3">
-      <h3>Project Title 3</h3>
-      <p>Description of the project goes here. It should be a brief overview of the project and its key features.</p>
-    </section>
-  </main>
-  <footer>
-    <p>Birdup's Website 2024</p>
-  </footer>
+    </div>
+
+    <div class="section">
+      <h2>SDKs</h2>
+      <div class="umbrella">
+        <div class="project">
+          <h3>Dart SDK for AGiXT</h3>
+          <p>A comprehensive Dart SDK that enables developers to integrate AGiXT functionality into their applications, leveraging the power of the Dart programming language.</p>
+          <a href="https://github.com/AGiXT/dart-sdk">Learn More</a>
+        </div>
+        <div class="project">
+          <h3>Rust SDK for AGiXT</h3>
+          <p>A high-performance Rust SDK that provides a robust and efficient way to interact with the AGiXT platform, taking advantage of Rust's safety and performance guarantees.</p>
+          <a href="https://github.com/birdup000/AGiXT-Rust-SDK">Learn More</a>
+        </div>
+        <div class="project">
+          <h3>DevBoard SDK for Arduino and Raspberry Pi</h3>
+          <p>A versatile SDK that allows developers to seamlessly integrate AGiXT functionality into their Arduino and Raspberry Pi projects, enabling powerful IoT and embedded solutions.</p>
+          <a href="https://github.com/birdup000/AGIXT-DevBoardSDK">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
