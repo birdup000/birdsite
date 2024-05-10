@@ -3,18 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Birdup's Contributions for AGiXT</title>
+  <title>Birdup's Contributions</title>
   <style>
+    /* Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
     :root {
       --bg-color: #1f1f1f;
       --text-color: #f5f5f5;
       --project-bg: #2b2b2b;
       --project-hover: #3b3b3b;
       --link-color: #4da6ff;
+      --accent-color: #ff6b6b;
+    }
+
+    * {
+      box-sizing: border-box;
     }
 
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
       background-color: var(--bg-color);
@@ -24,41 +32,48 @@
     .container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 40px;
+      padding: 60px 40px;
     }
 
     .section {
-      margin-bottom: 60px;
+      margin-bottom: 80px;
     }
 
     .section h2 {
+      font-size: 2.5rem;
       margin-top: 0;
+      margin-bottom: 40px;
+      color: var(--accent-color);
     }
 
-    .umbrella {
+    .project-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       grid-gap: 40px;
     }
 
     .project {
       background-color: var(--project-bg);
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      transition: background-color 0.3s;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s, transform 0.3s;
     }
 
     .project:hover {
       background-color: var(--project-hover);
+      transform: translateY(-5px);
     }
 
     .project h3 {
+      font-size: 1.8rem;
       margin-top: 0;
+      margin-bottom: 20px;
     }
 
     .project p {
-      margin-bottom: 20px;
+      font-size: 1.1rem;
+      margin-bottom: 30px;
     }
 
     .project a {
@@ -66,20 +81,44 @@
       background-color: var(--link-color);
       color: var(--text-color);
       text-decoration: none;
-      padding: 10px 20px;
-      border-radius: 4px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      padding: 12px 24px;
+      border-radius: 6px;
       transition: background-color 0.3s;
+      margin-right: 10px;
     }
 
     .project a:hover {
       background-color: #0056b3;
     }
 
+    .demo-button {
+      display: inline-block;
+      background-color: var(--accent-color);
+      color: var(--text-color);
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 600;
+      padding: 12px 24px;
+      border-radius: 6px;
+      transition: background-color 0.3s;
+    }
+
+    .demo-button:hover {
+      background-color: #e04040;
+    }
+
     /* Navigation Bar Styles */
     header {
       background-color: var(--bg-color);
-      padding: 10px 0;
+      padding: 20px 0;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
     }
 
     nav ul {
@@ -87,17 +126,17 @@
       margin: 0;
       padding: 0;
       display: flex;
-      justify-content: center;
     }
 
     nav ul li {
-      margin: 0 20px;
+      margin: 0 30px;
     }
 
     nav ul li a {
       color: var(--text-color);
       text-decoration: none;
-      font-weight: bold;
+      font-size: 1.2rem;
+      font-weight: 600;
       transition: color 0.3s;
     }
 
@@ -108,11 +147,38 @@
     /* Media Query for Mobile Devices */
     @media (max-width: 768px) {
       .container {
+        padding: 40px 20px;
+      }
+
+      .section h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+      }
+
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project {
         padding: 20px;
       }
 
-      .umbrella {
-        grid-template-columns: 1fr;
+      .project h3 {
+        font-size: 1.6rem;
+      }
+
+      .project p {
+        font-size: 1rem;
+      }
+
+      .project a,
+      .demo-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+      }
+
+      nav {
+        justify-content: center;
       }
 
       nav ul {
@@ -122,6 +188,10 @@
 
       nav ul li {
         margin: 10px 0;
+      }
+
+      nav ul li a {
+        font-size: 1.1rem;
       }
     }
   </style>
@@ -137,11 +207,21 @@
   </header>
 
   <div class="container">
-    <h1>Birdup's Contributions for AGiXT</h1>
+    <div class="section">
+      <h2>Personal Projects</h2>
+      <div class="project-grid">
+        <div class="project">
+          <h3>ADHD Task Management Panel</h3>
+          <p>A web-based task management application designed to help individuals with ADHD stay organized and productive.</p>
+          <a href="https://github.com/birdup000/ADHD-TaskManagementPanel">Learn More</a>
+          <a href="https://adhdpanel.vercel.app/" class="demo-button">Demo</a>
+        </div>
+      </div>
+    </div>
 
     <div class="section">
-      <h2>UIs</h2>
-      <div class="umbrella">
+      <h2>Contributions for AGiXT</h2>
+      <div class="project-grid">
         <div class="project">
           <h3>Kivy UI</h3>
           <p>A cross-platform user interface built with the Kivy framework, offering a seamless and responsive experience across various devices.</p>
@@ -152,12 +232,6 @@
           <p>A modern and visually appealing user interface developed using the Flutter framework, providing a consistent and native-like experience.</p>
           <a href="https://github.com/birdup000/FlutterUI-AGiXT">Learn More</a>
         </div>
-      </div>
-    </div>
-
-    <div class="section">
-      <h2>SDKs</h2>
-      <div class="umbrella">
         <div class="project">
           <h3>Dart SDK for AGiXT</h3>
           <p>A comprehensive Dart SDK that enables developers to integrate AGiXT functionality into their applications, leveraging the power of the Dart programming language.</p>

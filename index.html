@@ -6,11 +6,120 @@
   <link rel="stylesheet" href="css/styles.css">
   <title>Birdup's Website</title>
   <style>
+    /* Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+    :root {
+      --bg-color: #1f1f1f;
+      --text-color: #f5f5f5;
+      --project-bg: #2b2b2b;
+      --project-hover: #3b3b3b;
+      --link-color: #4da6ff;
+      --accent-color: #ff6b6b;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 40px;
+    }
+
+    .section {
+      margin-bottom: 80px;
+    }
+
+    .section h2 {
+      font-size: 2.5rem;
+      margin-top: 0;
+      margin-bottom: 40px;
+      color: var(--accent-color);
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-gap: 40px;
+    }
+
+    .project {
+      background-color: var(--project-bg);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .project:hover {
+      background-color: var(--project-hover);
+      transform: translateY(-5px);
+    }
+
+    .project h3 {
+      font-size: 1.8rem;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    .project p {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+
+    .project a {
+      display: inline-block;
+      background-color: var(--link-color);
+      color: var(--text-color);
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 600;
+      padding: 12px 24px;
+      border-radius: 6px;
+      transition: background-color 0.3s;
+      margin-right: 10px;
+    }
+
+    .project a:hover {
+      background-color: #0056b3;
+    }
+
+    .demo-button {
+      display: inline-block;
+      background-color: var(--accent-color);
+      color: var(--text-color);
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 600;
+      padding: 12px 24px;
+      border-radius: 6px;
+      transition: background-color 0.3s;
+    }
+
+    .demo-button:hover {
+      background-color: #e04040;
+    }
+
     /* Navigation Bar Styles */
     header {
-      background-color: #1f1f1f;
-      padding: 10px 0;
+      background-color: var(--bg-color);
+      padding: 20px 0;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
     }
 
     nav ul {
@@ -18,118 +127,61 @@
       margin: 0;
       padding: 0;
       display: flex;
-      justify-content: center;
     }
 
     nav ul li {
-      margin: 0 20px;
+      margin: 0 30px;
     }
 
     nav ul li a {
-      color: #f5f5f5;
+      color: var(--text-color);
       text-decoration: none;
-      font-weight: bold;
+      font-size: 1.2rem;
+      font-weight: 600;
       transition: color 0.3s;
     }
 
     nav ul li a:hover {
-      color: #4da6ff;
+      color: var(--link-color);
     }
 
-    /* Existing Styles */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #1f1f1f;
-      color: #f5f5f5;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 40px;
-    }
-
-    .hero {
-      text-align: center;
-      margin-bottom: 60px;
-    }
-
-    .hero h1 {
-      font-size: 36px;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      font-size: 18px;
-      margin-bottom: 40px;
-    }
-
-    .cta-button {
-      display: inline-block;
-      background-color: #4da6ff;
-      color: #f5f5f5;
-      text-decoration: none;
-      padding: 10px 20px;
-      border-radius: 4px;
-      transition: background-color 0.3s;
-    }
-
-    .cta-button:hover {
-      background-color: #0056b3;
-    }
-
-    .features {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-gap: 40px;
-    }
-
-    .feature {
-      background-color: #2b2b2b;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      transition: background-color 0.3s;
-    }
-
-    .feature:hover {
-      background-color: #3b3b3b;
-    }
-
-    .feature h2 {
-      margin-top: 0;
-    }
-
-    .expertise {
-      background-color: #2b2b2b;
-      padding: 40px;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      margin-bottom: 60px;
-    }
-
-    .expertise h2 {
-      font-size: 24px;
-      margin-top: 0;
-    }
-
-    .expertise p {
-      font-size: 18px;
-      margin-bottom: 0;
-    }
-
-    footer {
-      background-color: #1f1f1f;
-      color: #f5f5f5;
-      padding: 20px 0;
-      text-align: center;
-    }
-
+    /* Media Query for Mobile Devices */
     @media (max-width: 768px) {
-      /* Styles for screens up to 768px wide */
+      .container {
+        padding: 40px 20px;
+      }
+
+      .section h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+      }
+
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project {
+        padding: 20px;
+      }
+
+      .project h3 {
+        font-size: 1.6rem;
+      }
+
+      .project p {
+        font-size: 1rem;
+      }
+
+      .project a,
+      .demo-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
       nav ul {
         flex-direction: column;
         align-items: center;
@@ -139,12 +191,8 @@
         margin: 10px 0;
       }
 
-      .features {
-        grid-template-columns: 1fr;
-      }
-
-      .container {
-        padding: 20px;
+      nav ul li a {
+        font-size: 1.1rem;
       }
     }
   </style>
